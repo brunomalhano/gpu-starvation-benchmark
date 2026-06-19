@@ -1,0 +1,43 @@
+# Python cache and bytecode
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Notebook checkpoints
+.ipynb_checkpoints/
+
+# OS/editor files
+.DS_Store
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+
+# Local outputs and generated artifacts
+output/
+results/
+**/build/
+**/*.aux
+**/*.out
+**/*.spl
+**/*.toc
+**/*.lof
+**/*.lot
+
+# Large archives and raw datasets
+*.tar
+*.tar.gz
+*.zip
+*_dataset_local/
+dataset/
+
+# Keep sample result files tracked
+!data/results_sample/*.csv
+!data/results_sample/*.txt
