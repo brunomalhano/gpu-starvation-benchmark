@@ -1,0 +1,21 @@
+--- Results for Epoch 1 (Scenario A) ---
+Total Epoch Time: 45.26 s
+Throughput: 13.28 MB/s
+Compute time on CPU: 33.10 s
+Time waiting for data (I/O): 12.16 s
+I/O wait rate: 26.9%
+------------------------------
+--- Results for Epoch 1 (Scenario B) ---
+Total Epoch Time: 126.75 s
+Throughput: 12.68 MB/s
+Compute time on CPU: 85.98 s
+Time waiting for data (I/O): 40.78 s
+I/O wait rate: 32.2%
+------------------------------
+--- Results for Epoch 1 (Scenario C) ---
+Total Epoch Time: 44.46 s
+Throughput: 13.52 MB/s
+Compute time on CPU: 31.92 s
+Time waiting for data (I/O): 12.54 s
+I/O wait rate: 28.2%
+------------------------------

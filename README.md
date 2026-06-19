@@ -55,6 +55,9 @@ env/                     Runtime assets (Dockerfile, requirements.txt)
 infra/main.bicep         Azure infrastructure (ACR, Storage, Container Apps Jobs)
 scripts/deploy.sh        Build, deploy, and dataset-upload automation
 data/results_sample/     Lightweight sample results used in the paper
+  local/                 Local single-run results (CPU and GPU)
+  azure_aca/             Azure Container Apps single-run results (CPU and GPU)
+  azure_aca_sweep/       Azure worker-count sweep (consolidated)
 data/DATA_ACCESS.md      How to obtain the raw dataset (not redistributed here)
 docs/                    Publication scope and content boundaries
 ```
@@ -114,13 +117,24 @@ group, location, registry name).
 
 ## Sample results
 
-Example output from a single-epoch run (`data/results_sample/training_results_cpu.csv`):
+Sample results are grouped by environment under `data/results_sample/`:
+`local/`, `azure_aca/`, and `azure_aca_sweep/`.
+
+Local CPU run (`data/results_sample/local/training_results_cpu.csv`):
 
 | Scenario | Total time (s) | Throughput (MB/s) | Data wait (s) | GPU starvation (%) |
 |----------|---------------:|------------------:|--------------:|-------------------:|
 | A | 134.75 | 11.93 | 38.81 | 28.8 |
 | B | 171.67 |  9.37 | 76.66 | 44.7 |
 | C | 265.07 | 12.13 | 61.06 | 23.0 |
+
+Azure Container Apps GPU run (`data/results_sample/azure_aca/training_results_gpu.csv`):
+
+| Scenario | Total time (s) | Throughput (MB/s) | Data wait (s) | GPU starvation (%) |
+|----------|---------------:|------------------:|--------------:|-------------------:|
+| A | 15.10 | 39.82 | 11.95 | 79.2 |
+| B | 49.31 | 32.61 | 41.77 | 84.7 |
+| C | 14.57 | 41.27 | 11.81 | 81.1 |
 
 Numbers are illustrative samples from one environment; absolute values depend on
 storage, network, and accelerator. The benchmark is intended for **relative**

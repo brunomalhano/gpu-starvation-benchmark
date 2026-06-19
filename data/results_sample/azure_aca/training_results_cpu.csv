@@ -1,0 +1,4 @@
+timestamp,host,scenario,epoch,total_time_s,throughput_mb_s,gpu_compute_s,data_wait_s,gpu_starvation_percent
+2026-05-21T15:26:34,2452412e5c6f468eaecd5c80cf9ed0fe,Scenario A,1,45.26,13.28,33.10,12.16,26.9
+2026-05-21T15:28:40,2452412e5c6f468eaecd5c80cf9ed0fe,Scenario B,1,126.75,12.68,85.98,40.78,32.2
+2026-05-21T15:29:25,2452412e5c6f468eaecd5c80cf9ed0fe,Scenario C,1,44.46,13.52,31.92,12.54,28.2
