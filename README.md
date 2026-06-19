@@ -148,4 +148,4 @@ small sample result files are included under `data/results_sample/`.
 
 ## License
 
-Add a license file before publishing if you intend to allow reuse.
+Released under the [MIT License](LICENSE).
