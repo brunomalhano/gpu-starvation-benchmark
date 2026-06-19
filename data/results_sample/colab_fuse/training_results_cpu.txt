@@ -1,0 +1,22 @@
+--- Results for Epoch 1 (Scenario A) ---
+Total Epoch Time: 594.89 s
+Throughput: 2.70 MB/s
+Compute time on CPU: 541.26 s
+Time waiting for data (I/O): 53.62 s
+I/O wait rate: 9.0%
+------------------------------
+--- Results for Epoch 1 (Scenario B) ---
+Total Epoch Time: 540.74 s
+Throughput: 2.97 MB/s
+Compute time on CPU: 539.07 s
+Time waiting for data (I/O): 1.58 s
+I/O wait rate: 0.3%
+------------------------------
+--- Results for Epoch 1 (Scenario C) ---
+Staging time (parallel copy to local SSD): 15.35 s
+Total Epoch Time: 544.16 s
+Throughput: 2.95 MB/s
+Compute time on CPU: 542.04 s
+Time waiting for data (I/O): 2.00 s
+I/O wait rate: 0.4%
+------------------------------

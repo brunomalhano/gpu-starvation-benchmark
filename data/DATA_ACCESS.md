@@ -6,6 +6,22 @@ The full raw image dataset used in experiments is not redistributed in this publ
 
 - Aggregated and sample experiment outputs in `data/results_sample/`.
 
+### Sample results by environment
+
+Each subfolder under `data/results_sample/` holds one run environment and maps to
+the environments reported in the manuscript:
+
+| Folder | Environment | Storage | Accelerator |
+|--------|-------------|---------|-------------|
+| `colab_fuse/` | Public cloud / Colab | FUSE network mount | CPU baseline + GPU |
+| `local/` | Edge / local workstation | Local SSD | CPU + GPU (RTX 3050) |
+| `azure_aca/` | Enterprise cloud (Azure Container Apps) | NVMe / Azure Files | CPU + GPU (Tesla T4) |
+| `azure_aca_sweep/` | Azure Container Apps | NVMe | GPU worker-count sweep (consolidated) |
+
+Each environment provides `training_results_cpu.{csv,txt}` and
+`training_results_gpu.{csv,txt}` (the sweep folder provides a single
+`consolidated_sweep.csv`). Values are single-epoch runs per scenario.
+
 ## What must be provided by the user
 
 - A local dataset folder compatible with the expected class layout used by the scripts.

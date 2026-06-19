@@ -55,6 +55,7 @@ env/                     Runtime assets (Dockerfile, requirements.txt)
 infra/main.bicep         Azure infrastructure (ACR, Storage, Container Apps Jobs)
 scripts/deploy.sh        Build, deploy, and dataset-upload automation
 data/results_sample/     Lightweight sample results used in the paper
+  colab_fuse/            Public cloud / Colab run over FUSE network storage (CPU and GPU)
   local/                 Local single-run results (CPU and GPU)
   azure_aca/             Azure Container Apps single-run results (CPU and GPU)
   azure_aca_sweep/       Azure worker-count sweep (consolidated)
@@ -118,7 +119,17 @@ group, location, registry name).
 ## Sample results
 
 Sample results are grouped by environment under `data/results_sample/`:
-`local/`, `azure_aca/`, and `azure_aca_sweep/`.
+`colab_fuse/`, `local/`, `azure_aca/`, and `azure_aca_sweep/`.
+
+Public cloud / Colab GPU run over FUSE network storage
+(`data/results_sample/colab_fuse/training_results_gpu.csv`) — the headline
+I/O-bound case, where naive POSIX reads leave the GPU idle ~99% of the time:
+
+| Scenario | Total time (s) | Throughput (MB/s) | Data wait (s) | GPU starvation (%) |
+|----------|---------------:|------------------:|--------------:|-------------------:|
+| A | 1014.49 |  1.58 | 1002.54 | 98.8 |
+| B |   86.77 | 18.53 |   77.76 | 89.6 |
+| C |   39.04 | 41.18 |   29.97 | 76.8 |
 
 Local CPU run (`data/results_sample/local/training_results_cpu.csv`):
 

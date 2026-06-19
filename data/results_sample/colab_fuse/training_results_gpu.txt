@@ -1,0 +1,22 @@
+--- Results for Epoch 1 (Scenario A) ---
+Total Epoch Time: 1014.49 s
+Throughput: 1.58 MB/s
+Compute time on GPU: 11.41 s
+Time waiting for data (CPU): 1002.54 s
+GPU Starvation Rate: 98.8%
+------------------------------
+--- Results for Epoch 1 (Scenario B) ---
+Total Epoch Time: 86.77 s
+Throughput: 18.53 MB/s
+Compute time on GPU: 8.23 s
+Time waiting for data (CPU): 77.76 s
+GPU Starvation Rate: 89.6%
+------------------------------
+--- Results for Epoch 1 (Scenario C) ---
+Staging time (parallel copy to local SSD): 10.90 s
+Total Epoch Time: 39.04 s
+Throughput: 41.18 MB/s
+Compute time on GPU: 7.95 s
+Time waiting for data (CPU): 29.97 s
+GPU Starvation Rate: 76.8%
+------------------------------
